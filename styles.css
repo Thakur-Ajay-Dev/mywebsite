@@ -15,18 +15,26 @@ header {
     position: relative;
 }
 
-.social-links a {
+.social-links {
     display: flex;
-    align-items: center;
-    color: white;
-    text-decoration: none;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-links a {
     margin: 0 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-links a:hover,
+.social-links a:active {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .social-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 5px;
+    width: 40px;
+    height: 40px;
 }
 
 .skills span {
@@ -42,6 +50,7 @@ header {
 .card {
     background: #444;
     color: #f5f5f5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card a {
@@ -49,26 +58,34 @@ header {
     text-decoration: none;
 }
 
-.glow {
-    transition: all 0.3s ease-in-out;
-}
-
-.glow:hover,
-.glow:active {
+.card:hover,
+.card:active {
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 @media (max-width: 768px) {
-    header {
+    /* header {
         padding: 30px 0;
     }
 
     .social-links {
         flex-direction: column;
+        align-items: center;
     }
 
     .social-links a {
         margin-bottom: 10px;
+    } */
+    .social-links {
+        flex-direction: row; /* Horizontal layout */
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+        margin-bottom: 10px; /* Optional: Add margin bottom */
+    }
+
+    .social-links a {
+        margin-right: 10px; /* Add spacing between social media icons */
+        margin-bottom: 0; /* Remove vertical margin for individual links */
     }
 }
