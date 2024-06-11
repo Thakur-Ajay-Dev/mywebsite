@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1e1e1e;
+    color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(45deg, #333, #444, #555);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+.skills span {
+    display: inline-block;
+    background: #444;
+    color: #ff6b6b;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.card {
+    background: #444;
+    color: #f5f5f5;
+}
+
+.card a {
+    color: #ff6b6b;
+    text-decoration: none;
+}
+
+.glow {
+    transition: all 0.3s ease-in-out;
+}
+
+.glow:hover,
+.glow:active {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 30px 0;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+
+    .social-links a {
+        margin-bottom: 10px;
+    }
+}
